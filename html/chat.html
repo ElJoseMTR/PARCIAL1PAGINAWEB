@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IUB sistema de reserva de instalaciones</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/javasrip.js" defer></script>
+    <script src="../js/verific.js"></script>
+    <script>
+        window.onload = function() {
+            window.addEventListener('popstate', function(event) {
+                history.pushState(null, document.title, location.href);
+                event.preventDefault();
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="top-bar">
+        <img src="../imagenes/logoIUB.png" alt="Logo" class="logo-img">
+        <div class="btn-menu">
+            <label for="btn-menu" class="boton2">☰</label>
+        </div>
+    </div>
+    <input type="checkbox" id="btn-menu">
+    <div class="container-menu">
+        <div class="cont-menu">
+            <nav>
+                <a href=""></a>
+                <a href="principio1.html">Inicio</a>
+                <a href="chat.html">Chat</a>
+                <a href="#">Tutorial</a>
+                <a href="locaciones.html">Locaciones</a>
+                <a href="nutrientes.html">Nutrientes</a>
+                <a href="ejercisio.html">Ejercisios</a>
+                <a href="#"  id="salir">Salir</a>
+                <script src="../js/javasrip.js"></script>
+            </nav>
+            <label for="btn-menu" class="botonx">✖</label>
+        </div>
+    </div>
+    <div id="app">
+        <h1>Bienvenido a tu Asistente de Salud Física</h1>
+        <main>
+            <div id="chat-container">
+                <div id="chat-box">
+                    <!-- Chat messages will be appended here -->
+                </div>
+                <input type="text" id="user-input" placeholder="Escribe tu mensaje..."><br><br>
+                <button id="send-btn">Enviar</button>
+            </div>
+        </main>
+    </div>
+    <br><br>
+    <footer>
+        <div class="footer-content">
+          <p>&copy; 2024 Mejora Tus Hábitos Fisicos IUB</p>
+        </div>
+      </footer>
+</body>
+</html>

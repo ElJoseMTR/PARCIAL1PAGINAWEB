@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IUB sistema de reserva de instalaciones</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/javascript.js"></script>
+    <script src="../js/verific.js"></script>
+</head>
+<body>
+    <div class="top-bar">
+        <img src="../imagenes/logoIUB.png" alt="Logo" class="logo-img">
+        <div class="btn-menu">
+            <label for="btn-menu" class="boton2">☰</label>
+        </div>
+    </div>
+
+    <input type="checkbox" id="btn-menu">
+    <div class="container-menu">
+        <div class="cont-menu">
+            <nav>
+                <a href=""></a>
+                <a href="principio1.html">Inicio</a>
+                <a href="chat.html">Chat</a>s
+                <a href="locaciones.html">Locaciones</a>
+                <a href="nutrientes.html">Nutrientes</a>
+                <a href="ejercisio.html">Ejercisios</a>
+                <a href="#" id="salir">Salir</a>
+                <script src="../js/javasrip.js"></script>
+            </nav>
+            <label for="btn-menu" class="botonx">✖</label>
+        </div>
+    </div>
+    <br>
+
+    <!-- Mensaje de bienvenida con estilo -->
+    <div class="welcome-message">
+        <span id="saludo">Hola, </span><span id="username"></span><span> bienvenido a nuestra página web dedicada a mejorar tu
+        salud física. Aquí encontrarás una variedad de recursos diseñados para ayudarte a alcanzar tus objetivos de
+        bienestar. Explora nuestras secciones de tutoriales, locaciones de entrenamiento, información sobre nutrientes
+        esenciales y ejercicios personalizados. Estamos aquí para apoyarte en cada paso de tu viaje hacia una vida más
+        saludable y activa. ¡Empecemos juntos este emocionante camino hacia una mejor salud!</span>
+    </div>
+
+    <img src="../imagenes/imagenBienvenida.png"  class="clase-css">
+<br><br><br>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var username = localStorage.getItem('username');
+            if (username) {
+                document.getElementById('username').innerHTML = username;
+            } else {
+                document.getElementById('username').innerHTML = ""; // Valor por defecto
+            }
+        });
+    </script>
+
+    <script src="../js/javasrip.js"></script>
+    <footer>
+        <div class="footer-content">
+          <p>&copy; 2024 Mejora Tus Hábitos FisicosIUB</p>
+        </div>
+      </footer>
+</body>
+</html>
