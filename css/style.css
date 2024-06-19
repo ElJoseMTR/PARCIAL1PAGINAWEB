@@ -1,0 +1,588 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Inicio {
+     display: block; 
+    }
+.Objetivos {
+     display: none; 
+    }
+    .Contacto {
+        display: none; 
+       }
+       .hidden {
+        display: none;
+      }
+      
+body{
+    background: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.main{
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+.contenedor__todo{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+.caja__trasera{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 128, 255, 0.5);
+    margin-top: 170px;
+}
+.caja__trasera div{
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
+.caja__trasera div p,
+.caja__trasera div button{
+    margin-top: 30px;
+}
+
+.caja__trasera  div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+.caja__trasera button{
+    padding: 10px 40px;
+    border: 2px solid white;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+}
+.caja__trasera button:hover{
+    background: white;
+    color: #46A2FD;
+}
+
+
+/*FORMULARIOS*/
+
+.contenedor__login-register{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.75);
+}
+
+
+.contenedor__login-register form{
+    width: 100%;
+    padding: 80px 20px;
+    background: white;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.contenedor__login-register form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #46A2FD;
+}
+.contenedor__login-register form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+.contenedor__login-register form button{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 20px;
+    background: #46A2FD;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.formulario__login{
+    opacity: 1;
+    display: block;
+
+}
+.formulario__register{
+    display: none;
+}
+
+@media  screen and (max-width: 850px){
+    main{
+        margin-top: 50px;
+    }
+    .caja__trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+    .caja__trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+
+    .contenedor__login-register{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedor__login-register form{
+        position: relative;
+    }
+
+}
+
+.top-bar {
+    width: 100%;
+    height: 50px; 
+    background-color: #46A2FD; 
+    display: flex;
+    align-items: center; 
+    padding: 0 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.search-container {
+    display: flex;
+    align-items: center; 
+}
+
+
+.search-input {
+    margin-left: 770px;
+    padding: 7px 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    outline: none;
+}
+
+.search-button {
+    padding: 6px 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-left: none; 
+    border-radius: 5px ;
+    background-color: #0066cc; 
+    color: white;
+    cursor: pointer;
+    outline: none;
+    margin-left: 13px; 
+}
+
+.menu-button {
+    padding: 15px 20px;
+    font-size: 25px;
+    border: 1px solid #0066cc; 
+    border-left: none; 
+    border-radius: 5px ;
+    background-color: #ffffff; 
+    color:#0066cc; 
+    cursor: pointer;
+    outline: none;
+    margin-left: -1770px; 
+    
+}
+
+
+
+
+
+.search-button:hover {
+    background-color: #ffffff; 
+    color: #0066cc; 
+}
+.logo-img {
+    height: 50px; /* Ajusta la altura del logo según tus necesidades */
+    margin-left: 100px;
+}
+
+.boton2{
+    cursor: pointer;
+    left: 20px; 
+    position: absolute;
+    top: 0px;          
+    color: white;
+    display: flex;
+    font-size: 35px;
+    user-select: none;  
+}
+
+
+
+#btn-menu{
+    display: none;
+}
+.container-menu{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #ffffff;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translate(15%);
+}
+.botonx{
+    left: 200px;
+    user-select: none;
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #05b8ff;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+
+}
+.cont-menu nav a:hover{
+
+    border-left: 5px;
+
+
+
+}
+
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #05b8ff;
+}
+
+
+
+
+  header {
+    background-color: #46A2FD;
+    padding: 7px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 150px;
+    margin-right: 10px;
+  }
+
+  .buttons button {
+    background-color: #46A2FD;
+    border: #021950;
+    color: #ffffff;
+    width: 90px;
+    height: 50px;
+    cursor: pointer;
+  }
+  .buttons button:hover{
+    background-color: rgb(15, 77, 223);
+  }
+  
+
+
+.seccion {
+    background-color: #46A2FD;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.seccion h1 {
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.seccion p {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  footer {
+    background-color: #46A2FD;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  section {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 20px;
+    margin-top: 5px;
+    border-radius: 10px;
+  }
+  
+  section h2 {
+    color: #121d35;
+    margin-top: 0;
+  }
+  
+  .questionnaire-link {
+    color: #111d35; 
+    text-decoration: none; 
+  }
+  
+  .questionnaire-link:hover {
+    color: #0452a5; 
+  }
+  .title{
+    text-align: center;
+    color: #000000;
+    margin-top: 40px;
+  }
+
+#app {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#chat-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.user-message, .bot-message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: #d4edda;
+    color: #155724;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.bot-message {
+    background-color: #cce5ff;
+    color: #004085;
+    align-self: flex-start;
+    text-align: left;
+}
+
+#chat-box {
+    height: 400px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#user-input {
+    width: calc(100% - 60px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#send-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #46A2FD;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#send-btn:hover {
+    background-color: #205b96;
+}
+
+/*  Styles de el textto de bienvenida al user*/
+.welcome-message {
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message span#usuario {
+    font-weight: bold;
+    color: #007BFF; /* Color azul para resaltar el nombre del usuario */
+}
+/* Estilos para centrar la imagen horizontalmente */
+.clase-css {
+    display: block;
+    margin: 0 auto;
+    width: 50%; /* Puedes ajustar el ancho según sea necesario */
+}
+
+
+.videos-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Espacio entre los videos */
+}
+
+.video-wrapper {
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporción 16:9 para el video */
+    position: relative;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.welcome-message iframe,
+.welcome-message img {
+    margin-right: 20px; /* Espacio entre el mapa y la imagen */
+}
+.centrar{
+    align-items: center;
+    text-align: center;
+}
+
+
+/* STYLE DE LOGIN*/
+.containerr {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 350px;
+    width: 80%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+  }
+.login-form input[type="button"]:hover {
+    background-color: #0056b3;
+}
+.login h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos para el formulario */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+/* Estilos para etiquetas y entradas de texto en el formulario */
+.login-form label,
+.login-form input {
+    width: 100%;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para el botón del formulario */
+.login-form input[type="button"] {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
